@@ -17,7 +17,18 @@ app.use(express.static('public'));
 const hbs = exphbs.create();
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
-
+let useSSL = false;
+let local = process.env.LOCAL || false;
+if (process.env.DATABASE_URL && !local) {
+    useSSL = true;
+}
+const dbpool = new Pool({
+    connectionString: process.env.DATABASE_URL || 'postgresql://codex:pg123@localhost:5432/fruit_basket_app',
+    ssl: {
+        useSSL,
+        rejectUnauthorized: false
+    }
+});
 let counter = 0;
 
 app.get('/', function(req, res) {

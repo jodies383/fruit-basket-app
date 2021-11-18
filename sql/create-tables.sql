@@ -17,4 +17,3 @@ create table basket_item (
 	foreign key (fruit_id) references fruit(id),
 	foreign key (basket_id) references basket(id)
 );
-
