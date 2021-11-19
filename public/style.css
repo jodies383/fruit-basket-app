@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 body {
-	background-color: #618985;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-family: 'Poppins', sans-serif;
+	background-color: #89bdb8;
 }
 
 .container {
-	background-color: #EDFF86;
+	background-color: #e0f377;
+	border-radius: 20px;
 }
 
 .m-1 {
@@ -29,7 +32,7 @@ body {
 
 .w-7 {
 	width: 7em;
-	display: inline-block	;
+	display: inline-block;
 }
 
 .w-3 {
@@ -39,9 +42,9 @@ body {
 table {
 	border-collapse: collapse;
 }
-  
+
 td, th {
-border: 1px solid #999;
-padding: 0.5rem;
-text-align: left;
+	border: 1px solid #999;
+	padding: 0.5rem;
+	text-align: left;
 }
